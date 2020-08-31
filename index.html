@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/buttom.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="clcoltor1">
+    <div id="fon" class="clcoltor">
+
+    <div>
+<input  id="text" class="textbox"  type="text" >
+    </div>
+    <div class="a" ></div>
+    <div>
+        <button  onclick="clearr()" class="buttom1">c</button>
+        <button onclick="sumOf()" class="buttom1">=</button>
+
+    </div >
+
+    <div>
+    <button  onclick="myFunction(1)" class="buttom">1</button>
+    <button  onclick="myFunction(2)" class="buttom">2</button>
+    <button  onclick="myFunction(3)" class="buttom">3</button>
+    <button  onclick="operator('+')" class="buttom">+</button>
+
+
+</div >
+
+<div>
+    <button  onclick="myFunction(4)" class="buttom">4</button>
+    <button  onclick="myFunction(5)" class="buttom">5</button>
+    <button  onclick="myFunction(6)" class="buttom">6</button>
+    <button  onclick="operator('-')" class="buttom">-</button>
+
+</div>
+
+<div>
+    <button  onclick="myFunction(7)" class="buttom">7</button>
+    <button  onclick="myFunction(8)" class="buttom">8</button>
+    <button  onclick="myFunction(9)" class="buttom">9</button>
+    <button onclick="operator('*')" class="buttom">*</button>
+
+</div>
+<div>
+    <button onclick="myFunction(0)" class="buttom1">0</button>
+    <button onclick="myFunction('.')" class="buttom">.</button>
+    <button onclick="operator('/')" class="buttom">/</button>
+</div>
+
+</div>
+</div>
+
+<script>
+var n1=0;
+var n2=0;
+var n3='';
+var sum=0;
+var ection='';
+
+
+function myFunction(x) 
+{
+    sum=0
+text.value+=x
+}
+function operator(y) 
+{
+n1=text.value
+text.value=""
+
+
+ection=y
+}
+
+
+function sumOf() 
+{
+if (text.value) {
+    
+}
+  n2=text.value 
+  if (ection=='+')
+   {
+      sum=parseFloat (n1)+parseFloat (n2)
+  } 
+if (ection =='-') {
+    sum=parseFloat (n1)-parseFloat (n2)
+}
+  if (ection=='*')
+   {
+      sum=parseFloat (n1)*parseFloat (n2)
+  } 
+  if (ection=='/')
+   {
+      sum=parseFloat (n1)/parseFloat (n2)
+  } 
+  text.value=sum
+}
+function clearr() 
+{
+text.value=""
+}
+
+
+</script>
+
+
+</body>
+</html>
